@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Разработчика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">astral<span>666</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+    </header>
+
+
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">Привет, я</p>
+                <h1>Владислав <span class="typing"></span></h1>
+                <p class="hero-description">
+                Создаю чистый и эффективный код. Специализируюсь на современной верстке и создании удобных интерфейсов.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">Посмотреть работы</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-wrapper">
+                <div class="about-info">
+                    <h2>Обо мне</h2>
+                    <p>Я создаю веб-интерфейсы, которые сочетают в себе эстетику и функциональность. Мой путь в разработке начался с любопытства к тому, как устроены сайты, и перерос в профессиональное обучение.</p>
+
+                    <div class="about-facts">
+                        <div class="fact-item"><strong>Локация:</strong> РФ, Дистанционно</div>
+                        <div class="fact-item"><strong>Обучение:</strong> Профильное IT</div>
+                        <div class="fact-item"><strong>Цель:</strong> Junior Frontend Developer</div>
+                    </div>
+                </div>
+
+        <div class="about-skills">
+            <h3>Мой стек</h3>
+            <div class="skill-line">
+                <span>HTML5 / CSS3</span>
+                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-line">
+                <span>JavaScript</span>
+                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-line">
+                <span>Python </span>
+                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-line">
+                <span>Git / GitHub</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+        <section id="projects">
+            <h2>Мои проекты</h2>
+            <div class="project-card">
+                <!-- БЛОК С ТЕКСТОМ (Слева) -->
+                <div class="project-content">
+            <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">AutoMaster</h3>
+            <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript</p>
+
+            <p style="margin-bottom: 20px; line-height: 1.6;">
+            Разработал адаптивный лендинг для автосервиса.
+            Реализовал удобную навигацию, блоки с услугами и форму записи.
+            Сделал упор на чистоту кода и скорость загрузки.
+            </p>
+
+                <div class="project-links">
+                    <a href="https://github.com/qq-astral666/work-examples/tree/qq-astral666-site1" target="_blank" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
+                    <a href="https://site1-git-qq-astral666-site1-vladypowerok-7668s-projects.vercel.app/index.html" class="btn" style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
+                </div>
+            </div>
+
+    <!-- БЛОК СО СЛАЙДЕРОМ (Справа) -->
+            <div class="project-image">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="img/project1.jpg" class="slide active" alt="Главный экран">
+                        <img src="img/project2.jpg" class="slide" alt="Услуги">
+                        <img src="img/project3.jpg" class="slide" alt="Контакты">
+                        <img src="img/project4.jpg" class="slide" alt="Контакты">
+                        <img src="img/project5.jpg" class="slide" alt="Контакты">
+                    </div>
+                    <button class="prev-btn" onclick="moveSlide(-1, this)">&#10094;</button>
+                    <button class="next-btn" onclick="moveSlide(1, this)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="contact">
+    <div class="contact-container">
+        <h2>Свяжитесь со мной</h2>
+        <p>Готов обсудить ваши идеи или просто пообщаться о технологиях. <span>Выбирайте любой удобный способ:</span></p>
+
+        <div class="contact-methods">
+            <a href="mailto:vladypowerok@gmail.com" class="contact-item">
+                <div class="icon-box">📧</div>
+                <div class="contact-info">
+                    <span class="label">Email</span>
+                </div>
+            </a>
+            <a href="https://t.me/zxcbashmack" target="_blank" class="contact-item">
+                <div class="icon-box">✈️</div>
+                <div class="contact-info">
+                    <span class="label">Telegram</span>
+                </div>
+            </a>
+            <a href="https://github.com/qq-astral666" target="_blank" class="contact-item">
+                <div class="icon-box">💻</div>
+                <div class="contact-info">
+                    <span class="label">GitHub</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
