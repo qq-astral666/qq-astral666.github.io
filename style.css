@@ -103,13 +103,18 @@ nav a:hover {
     padding-right: 5px;
 }
 
-.hero-description {
-    max-width: 600px;
-    color: #94a3b8;
-    margin-bottom: 30px;
+.hero-decription {
+    min-height: 200px; /* Резервирует место под одну строку текста */
+    max-width: 300px; /* Было 600px, сделали 400px */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между именем и печатающимся текстом */
+    margin: 10px 0; /* Чтобы отступы не плавали */
+    line-height: 1.6; /* Добавим немного расстояния между строками для красоты */
 }
 
 .hero-buttons {
+    margin-top: 20px;
     display: flex;
     justify-content: center; /* Центрирует кнопку по горизонтали */
     align-items: center;
@@ -131,8 +136,69 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.about-info, .about-skills {
+/* Стили только для главных заголовков */
+.about-content h2,
+.about-skills h2 {
     flex: 1;
+    min-width: 350px; /* НЕ даем ей сжиматься меньше 350px */
+}
+
+.skill-item span {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%; /* Теперь полоска растянется на все 400px */
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 25px; /* Расстояние до следующей технологии */
+    position: relative;
+    overflow: hidden;
+}
+
+/* 4. Сама закрашенная часть полоски */
+.progress {
+    height: 100%;
+    background: #00d2ff;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.5); /* Добавим легкое свечение */
+    border-radius: 10px;
+}
+
+/* 2. Поправляем названия технологий */
+.skill-info span {
+    font-size: 1.1rem; /* Увеличим шрифт технологий */
+    font-weight: 500;
+    color: #ffffff;    /* Сделаем их белыми, чтобы лучше читались */
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Возвращаем описание в нормальный вид */
+.about-content p {
+    color: #94a3b8;    /* Тот самый серый цвет */
+    font-size: 1.1rem; /* Обычный размер текста */
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px; /* Большой зазор между лево и право */
+    width: 100%;
+    max-width: 1200px; /* Ширина всего контента сайта */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-content {
+    flex: 1.2; /* Она чуть шире */
 }
 
 .about-info h2 {
