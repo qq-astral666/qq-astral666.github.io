@@ -7,86 +7,98 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">astral<span>666</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
-    </header>
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <p class="hero-subtitle">Привет, я</p>
-                <h1>Владислав <span class="typing"></span></h1>
-                <p class="hero-description">
+<header>
+    <div class="logo">astral<span>666</span></div>
+    <nav>
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Привет, я</p>
+            <h1>Владислав <span class="typing"></span></h1>
+            <p class="hero-description">
                 Создаю чистый и эффективный код. Специализируюсь на современной верстке и создании удобных интерфейсов.
-                </p>
+            </p>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">Посмотреть работы</a>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">Посмотреть работы</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper">
+            <div class="about-info">
+                <h2>Обо мне</h2>
+                <p>Я создаю веб-интерфейсы, которые сочетают в себе эстетику и функциональность. Мой путь в разработке
+                    начался с любопытства к тому, как устроены сайты, и перерос в профессиональное обучение.</p>
+
+                <div class="about-facts">
+                    <div class="fact-item"><strong>Локация:</strong> РФ, Дистанционно</div>
+                    <div class="fact-item"><strong>Обучение:</strong> Профильное IT</div>
+                    <div class="fact-item"><strong>Цель:</strong> Junior Frontend Developer</div>
                 </div>
             </div>
-        </section>
 
-        <section id="about">
-            <div class="about-wrapper">
-                <div class="about-info">
-                    <h2>Обо мне</h2>
-                    <p>Я создаю веб-интерфейсы, которые сочетают в себе эстетику и функциональность. Мой путь в разработке начался с любопытства к тому, как устроены сайты, и перерос в профессиональное обучение.</p>
-
-                    <div class="about-facts">
-                        <div class="fact-item"><strong>Локация:</strong> РФ, Дистанционно</div>
-                        <div class="fact-item"><strong>Обучение:</strong> Профильное IT</div>
-                        <div class="fact-item"><strong>Цель:</strong> Junior Frontend Developer</div>
+            <div class="about-skills">
+                <h2>Мой стек</h2> <!-- Только это будет большим и синим -->
+                <div class="skill-item">
+                    <span>JavaScript</span> <!-- Это останется обычным -->
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%"
                     </div>
                 </div>
-
-        <div class="about-skills">
-            <h2>Мой стек</h2> <!-- Только это будет большим и синим -->
-            <div class="skill-item">
-                <span>JavaScript</span> <!-- Это останется обычным -->
-                <div class="progress-bar"><div class="progress" style="width: 95%"</div></div>
             </div>
             <div class="skill-line">
                 <span>CSS</span>
-                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
             </div>
             <div class="skill-line">
                 <span>HTML</span>
-                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
             </div>
             <div class="skill-line">
                 <span>Python</span>
-                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-        <section id="projects">
-            <h2>Мои проекты</h2>
-            <div class="project-card">
-                <!-- БЛОК С ТЕКСТОМ (Слева) -->
-                <div class="project-content">
-            <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">AutoMaster</h3>
-            <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Мои проекты</h2>
 
-            <p style="margin-bottom: 20px; line-height: 1.6;">
-            Разработал адаптивный лендинг для автосервиса.
-            Реализовал удобную навигацию, блоки с услугами и форму записи.
-            Сделал упор на чистоту кода и скорость загрузки.
-            </p>
-
+        <!-- КАРТОЧКА 1: AutoMaster -->
+        <div class="project-card">
+            <!-- БЛОК С ТЕКСТОМ (Слева) -->
+            <div class="project-content">
+                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">AutoMaster</h3>
+                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript</p>
+                <p style="margin-bottom: 20px; line-height: 1.6;">
+                    Разработал адаптивный лендинг для автосервиса.
+                    Реализовал удобную навигацию, blocks с услугами и форму записи.
+                    Сделал упор на чистоту кода и скорость загрузки.
+                </p>
                 <div class="project-links">
-                    <a href="https://github.com/qq-astral666/work-examples/tree/qq-astral666-site1" target="_blank" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
-                    <a href="https://qq-astral666.github.io/tire-servise/" class="btn" style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
+                    <a href="https://github.com/qq-astral666/tire-servise" target="_blank" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
+                    <a href="https://qq-astral666.github.io/tire-servise/" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
                 </div>
             </div>
 
-    <!-- БЛОК СО СЛАЙДЕРОМ (Справа) -->
+            <!-- БЛОК СО СЛАЙДЕРОМ (Справа) -->
             <div class="project-image">
                 <div class="slider">
                     <div class="slides">
@@ -96,17 +108,60 @@
                         <img src="img/project4.jpg" class="slide" alt="Контакты">
                         <img src="img/project5.jpg" class="slide" alt="Контакты">
                     </div>
-                    <button class="prev-btn" onclick="moveSlide(-1, this)">&#10094;</button>
-                    <button class="next-btn" onclick="moveSlide(1, this)">&#10095;</button>
+                    <button class="prev-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="next-btn" onclick="moveSlide(1, this)">❯</button>
                 </div>
             </div>
-        </section>
-    </main>
+        </div> <!-- ВОТ ЭТОТ ТЕГ ЗАКРЫВАЕТ ПЕРВУЮ КАРТОЧКУ -->
 
-    <section id="contact">
+
+        <!-- КАРТОЧКА 2: Digital Agency -->
+        <div class="project-card">
+            <!-- БЛОК С ТЕКСТОМ (Слева) -->
+            <div class="project-content">
+                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">DigitalGo</h3>
+                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML5, CSS3, JavaScript
+                    (ES6+)</p>
+                <p style="margin-bottom: 20px; line-height: 1.6;">
+                    Разработал адаптивный корпоративный многостраничный сайт из 5 взаимосвязанных страниц.
+                    Реализовал живую фильтрацию кейсов по категориям на чистом JS, всплывающее модальное окно (Lightbox)
+                    для деталей проекта,
+                    динамический счетчик статистики при скролле и интерактивный FAQ-аккордеон.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/qq-astral666/digital-agency-portfolio" target="_blank" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
+                    <a href="https://qq-astral666.github.io/digital-agency-portfolio/" target="_blank" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
+                </div>
+            </div>
+
+            <!-- БЛОК СО СЛАЙДЕРОМ (Справа) -->
+            <div class="project-image">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="img/DigitalGo1.jpg" class="slide active" alt="Главная страница">
+                        <img src="img/DigitalGo2.jpg" class="slide" alt="Портфолио с фильтрами">
+                        <img src="img/DigitalGo3.jpg" class="slide" alt="Портфолио с фильтрами">
+                        <img src="img/DigitalGo4.jpg" class="slide" alt="Портфолио с фильтрами">
+                        <img src="img/DigitalGo5.jpg" class="slide" alt="Портфолио с фильтрами">
+                        <img src="img/DigitalGo6.jpg" class="slide" alt="Портфолио с фильтрами">
+                    </div>
+                    <button class="prev-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="next-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+            </div>
+        </div> <!-- ВОТ ЭТОТ ТЕГ ЗАКРЫВАЕТ ВТОРУЮ КАРТОЧКУ -->
+
+    </section> <!-- ЗАКРЫВАЕТ ВСЮ СЕКЦИЮ ПРОЕКТОВ -->
+
+</main>
+
+<section id="contact">
     <div class="contact-container">
         <h2>Свяжитесь со мной</h2>
-        <p>Готов обсудить ваши идеи или просто пообщаться о технологиях. <span>Выбирайте любой удобный способ:</span></p>
+        <p>Готов обсудить ваши идеи или просто пообщаться о технологиях. <span>Выбирайте любой удобный способ:</span>
+        </p>
         <div class="contact-methods">
             <a href="mailto:vladypowerok@gmail.com" class="contact-item">
                 <div class="icon-box">📧</div>
@@ -128,7 +183,7 @@
             </a>
         </div>
     </div>
-    </section>
-    <script src="script.js"></script>
+</section>
+<script src="script.js"></script>
 </body>
 </html>
