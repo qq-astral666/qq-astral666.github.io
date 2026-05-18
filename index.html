@@ -42,7 +42,7 @@
                 <div class="about-facts">
                     <div class="fact-item"><strong>Локация:</strong> РФ, Дистанционно</div>
                     <div class="fact-item"><strong>Обучение:</strong> Профильное IT</div>
-                    <div class="fact-item"><strong>Цель:</strong> Junior Frontend Developer</div>
+                    <div class="fact-item"><strong>Цель:</strong> Middle+ Frontend Developer</div>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@
                 <div class="skill-item">
                     <span>JavaScript</span> <!-- Это останется обычным -->
                     <div class="progress-bar">
-                        <div class="progress" style="width: 95%"
+                        <div class="progress" style="width: 95%">
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
             <!-- БЛОК С ТЕКСТОМ (Слева) -->
             <div class="project-content">
                 <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">AutoMaster</h3>
-                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript</p>
+                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript(ES6+)</p>
                 <p style="margin-bottom: 20px; line-height: 1.6;">
                     Разработал адаптивный лендинг для автосервиса.
                     Реализовал удобную навигацию, blocks с услугами и форму записи.
@@ -152,6 +152,46 @@
                 </div>
             </div>
         </div> <!-- ВОТ ЭТОТ ТЕГ ЗАКРЫВАЕТ ВТОРУЮ КАРТОЧКУ -->
+
+        <!-- Левая колонка: Текст -->
+        <div class="project-card"
+             style="display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-bottom: 60px;">
+
+            <!-- Левая колонка: Текст (теперь ширина совпадает с DigitalGo) -->
+            <div class="project-content" style="flex: 1; min-width: 300px;">
+                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">МедЦентр Плюс</h3>
+                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML5, CSS3, JavaScript
+                    (ES6+)</p>
+                <p style="margin-bottom: 20px; line-height: 1.6;">
+                    Разработал адаптивный многостраничный сайт клиники семейной медицины из 3 страниц.
+                    Сверстал интерактивные прайс-листы с кастомизированными таблицами стоимости услуг, реализовал
+                    динамический FAQ-аккордеон на чистом JS с плавной CSS-анимацией и настроил полную адаптивность
+                    шапки и контента под мобильные устройства.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/qq-astral666/medical-centre" target="_blank" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
+                    <a href="https://qq-astral666.github.io/medical-centre/index.html" target="_blank" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
+                </div>
+            </div>
+
+            <!-- Правая колонка: Картинка (слайдер) -->
+            <div class="project-image">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="img/ems6.jpg" class="slide active" alt="Главная страница">
+                        <img src="img/ems2.jpg" class="slide active" alt="Главная страница">
+                        <img src="img/ems3.jpg" class="slide active" alt="Главная страница">
+                        <img src="img/ems4.jpg" class="slide active" alt="Главная страница">
+                        <img src="img/ems5.jpg" class="slide active" alt="Главная страница">
+                        <img src="img/ems1.jpg" class="slide active" alt="Главная страница">
+                    </div>
+                    <button class="prev-btn" onclick="moveSlide(1, this)">❮</button>
+                    <button class="next-btn" onclick="moveSlide(-1, this)">❯</button>
+                </div>
+            </div>
+        </div>
 
     </section> <!-- ЗАКРЫВАЕТ ВСЮ СЕКЦИЮ ПРОЕКТОВ -->
 
