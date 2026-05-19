@@ -7,6 +7,12 @@
     --header-bg: rgba(15, 23, 42, 0.95);
 }
 
+/* Название класса замени на свой, если у тебя другой, например .logo */
+a {
+    color: #ffffff;           /* Возвращаем базовый белый цвет для текста */
+    text-decoration: none;    /* Полностью убираем нижнее подчеркивание */
+}
+
 @import url('https://googleapis.com');
 
 * {
@@ -45,7 +51,6 @@ header {
     font-family: 'Syncopate', sans-serif;
     font-size: 1.5rem;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
 .logo span {
@@ -55,7 +60,7 @@ header {
 
 /* Красный режим ника */
 .logo.active-demon span {
-    color: #ff4d4d !important;
+    color: #a855f7 !important;
     text-shadow: 0 0 20px #ff0000;
 }
 
