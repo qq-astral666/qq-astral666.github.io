@@ -79,9 +79,40 @@
     <section id="projects">
         <h2>Мои проекты</h2>
 
-        <!-- КАРТОЧКА 1: AutoMaster -->
         <div class="project-card">
-            <!-- БЛОК С ТЕКСТОМ (Слева) -->
+            <div class="project-content">
+                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">APEX shield</h3>
+                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript(ES6+)</p>
+                <p style="margin-bottom: 20px; line-height: 1.6;">
+                    Разработал адаптивный лендинг для компании зимней экипировки.
+                    Реализовал удобную навигацию, блоки с технологиями и космический дизайн.
+                    Добавил анимации, которых не было в прошлых проектах.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/qq-astral666/apex-hud-lens" target="_blank" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
+                    <a href="https://qq-astral666.github.io/apex-hud-lens/index.html" class="btn"
+                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
+                </div>
+            </div>
+
+            <div class="project-image">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="img/apex1.jpg" class="slide active" alt="Главный экран">
+                        <img src="img/apex2.jpg" class="slide" alt="Услуги">
+                        <img src="img/apex3.jpg" class="slide" alt="Контакты">
+                        <img src="img/apex4.jpg" class="slide" alt="Контакты">
+                        <img src="img/apex5.jpg" class="slide" alt="Контакты">
+                        <img src="img/apex6.jpg" class="slide" alt="Контакты">
+                    </div>
+                    <button class="prev-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="next-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
             <div class="project-content">
                 <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">AutoMaster</h3>
                 <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript(ES6+)</p>
@@ -112,7 +143,7 @@
                     <button class="next-btn" onclick="moveSlide(1, this)">❯</button>
                 </div>
             </div>
-        </div> <!-- ВОТ ЭТОТ ТЕГ ЗАКРЫВАЕТ ПЕРВУЮ КАРТОЧКУ -->
+        </div>
 
 
         <!-- КАРТОЧКА 2: Digital Agency -->

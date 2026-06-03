@@ -47,21 +47,33 @@ header {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
+/* Базовые стили ссылки (увеличили размер, убрали капс и подчеркивание) */
 .logo {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 1.5rem;
-    cursor: pointer;
+  text-decoration: none !important;
+  text-transform: none !important;
+  display: inline-flex;
+  gap: 6px;
+  font-size: 22px; /* Чуть увеличили, как ты просил */
+  font-weight: 500;
 }
 
-.logo span {
-    color: var(--accent-color);
-    transition: 0.4s;
+/* Изначальный цвет первой части текста (My web) */
+.logo__text {
+  color: #ffffff !important;
+  text-transform: none !important;
 }
 
-/* Красный режим ника */
-.logo.active-demon span {
-    color: #a855f7 !important;
-    text-shadow: 0 0 20px #ff0000;
+/* Изначальный цвет второй части текста — ГОЛУБОЙ */
+.logo__accent {
+  color: #25a7e8 !important; /* Твой привычный голубой */
+  text-transform: none !important;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+/* КОГДА НА .LOGO ЕСТЬ КЛАСС .ACTIVE-DEMON -> КРАСИМ В ФИОЛЕТОВЫЙ */
+.logo.active-demon .logo__accent {
+  color: #8b5cf6 !important; /* Наш фиолетовый HEX */
 }
 
 nav ul {
