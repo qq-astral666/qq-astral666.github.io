@@ -1,0 +1,247 @@
+:root{
+  --bg:#EEF1F4;
+  --paper:#FFFFFF;
+  --ink:#14202B;
+  --muted:#5B6875;
+  --line:#D5DBE1;
+  --blue:#2A8BD8;
+  --blue-dark:#1F6FB0;
+  --out:#E3F5D3;
+  --chat:#C9D8E4;
+  --display:"Unbounded",system-ui,sans-serif;
+  --body:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:1.0625rem;line-height:1.55;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch}
+section{padding:88px 0}
+
+/* Кнопки */
+.btn{display:inline-flex;align-items:center;gap:10px;font:500 1rem var(--body);text-decoration:none;padding:15px 24px;border-radius:999px;background:var(--blue);color:#fff;transition:background .15s}
+.btn:hover{background:var(--blue-dark)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost:hover{background:var(--paper)}
+
+/* Шапка */
+header{padding:20px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none}
+header nav{display:flex;gap:28px;align-items:center}
+header nav a{text-decoration:none;color:var(--muted);font-weight:500}
+header nav a:hover{color:var(--ink)}
+header nav .btn{padding:10px 18px;color:#fff}
+@media(max-width:760px){header nav a:not(.btn){display:none}}
+
+/* Первый экран */
+.hero{padding:40px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:22px}
+.hero .lead{font-size:1.2rem;margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--muted);font-size:.95rem;list-style:none}
+.facts li::before{content:"✓ ";color:var(--blue);font-weight:700}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.phone{margin:0 auto}}
+
+/* Телефон с демо-чатом */
+.phone{width:100%;max-width:360px;background:var(--ink);border-radius:44px;padding:12px;box-shadow:0 30px 60px -20px rgba(20,32,43,.35)}
+.screen{background:var(--chat);border-radius:34px;overflow:hidden}
+.chat-head{background:var(--paper);display:flex;gap:12px;align-items:center;padding:16px 18px}
+.ava{width:40px;height:40px;border-radius:50%;background:#F2B544;display:grid;place-items:center;font-size:1.25rem}
+.chat-head b{display:block;font-size:.95rem}
+.chat-head span{font-size:.8rem;color:var(--blue)}
+.msgs{padding:16px 12px 18px;display:flex;flex-direction:column;gap:8px;height:460px;overflow:hidden;font-size:.92rem}
+.m{max-width:82%;padding:9px 13px;border-radius:16px;background:var(--paper);line-height:1.4}
+.m.out{align-self:flex-end;background:var(--out);border-bottom-right-radius:5px}
+.m.in{border-bottom-left-radius:5px}
+.kb{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;max-width:92%}
+.kb span{background:rgba(255,255,255,.55);border-radius:9px;text-align:center;padding:7px 4px;font-size:.84rem;font-weight:500}
+.kb span.on{background:var(--blue);color:#fff}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.phone-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:14px}
+
+/* Услуги */
+.services{background:var(--paper)}
+.svc{margin-top:40px;border-top:1.5px solid var(--ink)}
+.svc-row{display:grid;grid-template-columns:1.1fr 1.6fr .6fr .7fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.svc-row h3{font-size:1.1rem}
+.svc-row p{color:var(--muted)}
+.svc-row .term{color:var(--muted);font-size:.95rem}
+.svc-row .price{font-family:var(--display);font-weight:500;font-size:1.1rem;text-align:right;white-space:nowrap}
+@media(max-width:760px){
+  .svc-row{grid-template-columns:1fr auto;gap:6px 16px}
+  .svc-row p{grid-column:1/-1;grid-row:2}
+  .svc-row .term{grid-row:3}
+  .svc-row .price{grid-row:3}
+}
+.svc-note{margin-top:20px;color:var(--muted);font-size:.95rem}
+
+/* Работы */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.work a{text-decoration:none;display:block}
+.work .shot{aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--line);margin-bottom:16px}
+.work img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s}
+.work a:hover img{transform:scale(1.03)}
+.work h3{font-size:1.05rem;margin-bottom:6px}
+.work p{color:var(--muted);font-size:.97rem}
+.work .tag{display:inline-block;font-size:.8rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin-top:10px}
+@media(max-width:900px){.works{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.works{grid-template-columns:1fr}}
+
+.bot-demo{margin-top:28px;background:var(--paper);border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.bot-demo h3{font-size:1.25rem;margin-bottom:8px}
+.bot-demo p{color:var(--muted);max-width:60ch}
+@media(max-width:700px){.bot-demo{grid-template-columns:1fr}}
+
+.apps-title{font-size:1.4rem;margin:72px 0 8px}
+.apps{list-style:none;margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));border-top:1.5px solid var(--ink)}
+.apps a{display:block;text-decoration:none;padding:20px 20px 20px 0;border-bottom:1px solid var(--line);height:100%}
+.apps b{display:block;font-family:var(--display);font-weight:500;margin-bottom:4px}
+.apps span{color:var(--muted);font-size:.97rem}
+.apps a:hover b{color:var(--blue)}
+
+/* Как работаю */
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px}
+.steps li{counter-increment:s;border-top:1.5px solid var(--ink);padding-top:18px}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:2rem;color:var(--blue);display:block;margin-bottom:10px}
+.steps h3{font-size:1.02rem;margin-bottom:6px}
+.steps p{color:var(--muted);font-size:.97rem}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{background:var(--paper)}
+.faq-list{margin-top:32px;max-width:780px}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-weight:500;font-size:1.08rem;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:1.6rem;color:var(--blue);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--muted);max-width:66ch}
+
+/* Контакт */
+.contact{text-align:center;padding:110px 0}
+.contact h2{font-size:clamp(1.9rem,4.4vw,3rem);max-width:20ch;margin:0 auto 16px}
+.contact .lead{margin:0 auto 32px}
+.contact .mail{display:block;margin-top:20px;color:var(--muted)}
+footer{background:var(--ink);color:#C3CDD6;padding:64px 0 28px;font-size:.95rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.foot .logo{color:#fff;font-size:1.3rem;display:inline-block;margin-bottom:12px}
+.foot-about p{max-width:36ch;margin-bottom:24px}
+.foot-btn{padding:12px 20px}
+.foot-col{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.foot-col h3{font-family:var(--body);font-size:.95rem;font-weight:500;color:#fff;margin-bottom:6px}
+.foot-col a{text-decoration:none;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-col span{color:#7F8C98;font-size:.88rem}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);color:#7F8C98;font-size:.85rem}
+@media(max-width:760px){.foot{grid-template-columns:1fr 1fr}.foot-about{grid-column:1/-1}}
+@media(max-width:420px){.foot{grid-template-columns:1fr}}
+
+
+/* ===== Полировка и анимации ===== */
+:root{--ease:cubic-bezier(.22,1,.36,1)}
+
+/* Шапка: липкая, с размытием после скролла */
+header{position:sticky;top:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.scrolled{background:rgba(238,241,244,.78);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 1px 0 var(--line)}
+header nav a:not(.btn){position:relative}
+header nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--blue);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+header nav a:not(.btn):hover::after{transform:scaleX(1)}
+
+/* Кнопки: подъём и нажатие */
+.btn{transition:background .2s,transform .25s var(--ease),box-shadow .25s}
+.btn:not(.btn-ghost){box-shadow:0 6px 18px -6px rgba(42,139,216,.55)}
+.btn:hover{transform:translateY(-2px)}
+.btn:not(.btn-ghost):hover{box-shadow:0 12px 26px -8px rgba(42,139,216,.6)}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* Первый экран: мягкое свечение за телефоном, загрузка по очереди */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:640px;height:640px;right:-120px;top:-80px;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,rgba(42,139,216,.28),rgba(42,139,216,0) 62%),radial-gradient(circle at 70% 70%,rgba(242,181,68,.22),rgba(242,181,68,0) 55%);
+  filter:blur(10px);pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.hero .wrap{position:relative}
+@keyframes drift{to{transform:translate(-60px,40px) scale(1.08)}}
+.js:not(.ready) .hero h1,.js:not(.ready) .hero .lead,.js:not(.ready) .hero-actions,.js:not(.ready) .facts,.js:not(.ready) .hero .phone,.js:not(.ready) .phone-note{opacity:0}
+.ready .hero h1,.ready .hero .lead,.ready .hero-actions,.ready .facts,.ready .hero .phone,.ready .phone-note{animation:rise .9s var(--ease) both}
+.hero .lead{animation-delay:.1s}
+.hero-actions{animation-delay:.2s}
+.facts{animation-delay:.3s}
+.ready .hero .phone{animation:rise 1s var(--ease) .25s both,float 7s ease-in-out 1.3s infinite}
+.phone-note{animation-delay:.5s}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* Чат: появление сообщений и «печатает…» */
+.msgs>*{transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.js .msgs>*:not(.show){opacity:0;transform:translateY(10px) scale(.97)}
+.msgs>.show{opacity:1;transform:none}
+.m.out{transform-origin:right bottom}
+.typing{display:inline-flex;gap:4px;padding:12px 14px;background:var(--paper);border-radius:16px;border-bottom-left-radius:5px;align-self:flex-start}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}
+.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+.kb span{transition:background .3s,color .3s}
+
+/* Появление блоков при скролле */
+.js .reveal{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0) * 80ms)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Услуги: подсветка строки */
+.svc-row{position:relative;transition:padding .35s var(--ease)}
+.svc-row::before{content:"";position:absolute;inset:0 -20px;background:var(--bg);border-radius:14px;opacity:0;transition:opacity .3s;z-index:-1}
+.svc{position:relative;z-index:0}
+.svc-row:hover::before{opacity:1}
+.svc-row .price{transition:color .3s}
+.svc-row:hover .price{color:var(--blue)}
+
+/* Работы: подъём карточки */
+.work a{transition:transform .4s var(--ease)}
+.work .shot{transition:box-shadow .4s var(--ease)}
+.work a:hover{transform:translateY(-6px)}
+.work a:hover .shot{box-shadow:0 22px 40px -18px rgba(20,32,43,.4)}
+.work img{transition:transform .8s var(--ease)}
+.work a:hover img{transform:scale(1.05)}
+
+.bot-demo{transition:box-shadow .4s var(--ease)}
+.bot-demo:hover{box-shadow:0 20px 40px -24px rgba(20,32,43,.35)}
+
+/* Приложения: полоска слева при наведении */
+.apps a{position:relative;transition:padding .35s var(--ease)}
+.apps a::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:3px;background:var(--blue);transform:scaleY(0);transition:transform .35s var(--ease)}
+.apps a:hover{padding-left:16px}
+.apps a:hover::before{transform:scaleY(1)}
+.apps b{transition:color .3s}
+
+/* Шаги: цифра заполняется при появлении */
+.steps li{border-top-color:var(--line);position:relative}
+.steps li::after{content:"";position:absolute;left:0;top:-1.5px;height:1.5px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease) calc(var(--i,0) * 150ms + .2s)}
+.steps li.in::after,html:not(.js) .steps li::after{transform:scaleX(1)}
+
+/* FAQ: плавное раскрытие (Chrome/Edge; в остальных — мгновенно) */
+details{overflow:hidden}
+summary{transition:color .2s}
+summary:hover{color:var(--blue)}
+summary::after{transition:transform .35s var(--ease)}
+
+/* Финальный блок */
+.contact{position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:auto 50% -260px auto;transform:translateX(50%);width:720px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(42,139,216,.2),transparent);pointer-events:none}
+.contact .wrap{position:relative}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .js .hero *{opacity:1!important}
+  .js .msgs>*{opacity:1!important;transform:none!important}
+}

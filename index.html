@@ -1,260 +1,255 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио Разработчика</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Владислав — Telegram-боты, мини-аппы и сайты для малого бизнеса</title>
+<meta name="description" content="Делаю Telegram-ботов для записи и заявок, мини-аппы с каталогом и сайты для малого бизнеса. Хабаровск и удалённо. Запуск от 5 дней.">
+<!-- Превью ссылки в Telegram -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qq-astral666.github.io/">
+<meta property="og:title" content="Telegram-боты и сайты для малого бизнеса">
+<meta property="og:description" content="Запись клиентов, приём заявок, каталог в Telegram. Запуск от 5 дней.">
+<meta property="og:image" content="https://qq-astral666.github.io/img/og.jpg"><!-- TODO: картинка 1200×630 -->
+<meta name="theme-color" content="#2A8BD8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){var d=document.documentElement;d.classList.add("js");
+var go=function(){d.classList.add("ready")};
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(go);setTimeout(go,1200)}else go();})();
+</script>
+<script src="js/main.js" defer></script>
 </head>
 <body>
+
 <header>
-    <a href="#" class="logo">My web <span>space</span></a>
-    <nav>
-        <ul>
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#projects">Проекты</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
+  <div class="wrap">
+    <a class="logo" href="#">Владислав</a>
+    <nav aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#works">Работы</a>
+      <a href="#faq">Вопросы</a>
+      <a class="btn" href="https://t.me/qq_astral">Написать</a>
     </nav>
+  </div>
 </header>
+
 <main>
-    <section id="hero">
-        <div class="hero-content">
-            <p class="hero-subtitle">Привет, я</p>
-            <h1>Владислав <span class="typing"></span></h1>
-            <p class="hero-description">
-                Создаю чистый и эффективный код. Специализируюсь на современной верстке и создании удобных интерфейсов.
-            </p>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Telegram-боты и сайты для малого бизнеса</h1>
+      <p class="lead">Клиенты сами записываются, оставляют заявки и смотрят каталог прямо в Telegram. Вы получаете уведомление и не тратите время на переписку.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://t.me/qq_astral">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+          Обсудить задачу в Telegram
+        </a>
+        <a class="btn btn-ghost" href="#services">Цены и сроки</a>
+      </div>
+      <ul class="facts">
+        <li>Запуск от 5 дней</li>
+        <li>Фиксированная цена до старта</li>
+        <li>Хабаровск и удалённо</li>
+      </ul>
+    </div>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn">Посмотреть работы</a>
-            </div>
+    <div>
+      <div class="phone" role="img" aria-label="Пример диалога с ботом записи в салон: клиент выбирает услугу и время, бот подтверждает запись">
+        <div class="screen">
+          <div class="chat-head">
+            <div class="ava" aria-hidden="true">✂️</div>
+            <div><b>Салон «Лён» — запись</b><span>бот</span></div>
+          </div>
+          <div class="msgs" aria-hidden="true">
+            <div class="m in">Здравствуйте! Выберите услугу 👇</div>
+            <div class="m out">Стрижка женская</div>
+            <div class="m in">Свободное время на субботу, 11 октября:</div>
+            <div class="kb"><span>10:00</span><span class="on">14:00</span><span>16:30</span></div>
+            <div class="m in">Готово ✅ Вы записаны на 14:00 к мастеру Анне. Напомню за 2 часа.</div>
+            <div class="m out">Спасибо!</div>
+          </div>
         </div>
-    </section>
+      </div>
+      <p class="phone-note">Так выглядит бот записи для салона</p>
+    </div>
+  </div>
+</section>
 
-    <section id="about">
-        <div class="about-wrapper">
-            <div class="about-info">
-                <h2>Обо мне</h2>
-                <p>Я создаю веб-интерфейсы, которые сочетают в себе эстетику и функциональность. Мой путь в разработке
-                    начался с любопытства к тому, как устроены сайты, и перерос в профессиональное обучение.</p>
+<section class="services" id="services">
+  <div class="wrap">
+    <h2>Что делаю</h2>
+    <p class="lead">Цена фиксируется до начала работы и не меняется по ходу.</p>
+    <!-- TODO: проверь цены и сроки -->
+    <div class="svc">
+      <div class="svc-row">
+        <h3>Бот для заявок</h3>
+        <p>Клиент отвечает на пару вопросов, заявка приходит вам в Telegram и в Google-таблицу.</p>
+        <span class="term">5–7 дней</span>
+        <span class="price">от 15 000 ₽</span>
+      </div>
+      <div class="svc-row">
+        <h3>Бот записи</h3>
+        <p>Услуги, мастера, свободное время, напоминания клиентам. Подходит салонам, барбершопам, студиям.</p>
+        <span class="term">7–10 дней</span>
+        <span class="price">от 30 000 ₽</span>
+      </div>
+      <div class="svc-row">
+        <h3>Мини-апп с каталогом</h3>
+        <p>Меню или каталог с фото и корзиной внутри Telegram. Заказ сразу приходит вам в чат.</p>
+        <span class="term">10–14 дней</span>
+        <span class="price">от 45 000 ₽</span>
+      </div>
+      <div class="svc-row">
+        <h3>Сайт или лендинг</h3>
+        <p>Быстрый адаптивный сайт с услугами, ценами и кнопкой записи. Можно связать с ботом.</p>
+        <span class="term">5–10 дней</span>
+        <span class="price">от 20 000 ₽</span>
+      </div>
+      <div class="svc-row">
+        <h3>Приложение для Mac</h3>
+        <p>Нативное приложение под вашу задачу: утилита, автоматизация рутины, работа с файлами. С установщиком и обновлениями.</p>
+        <span class="term">от 2 недель</span>
+        <span class="price">по задаче</span>
+      </div>
+    </div>
+    <p class="svc-note">Хостинг и сервер — от 300 ₽ в месяц, помогу всё настроить на ваше имя.</p>
+  </div>
+</section>
 
-                <div class="about-facts">
-                    <div class="fact-item"><strong>Локация:</strong> РФ, Дистанционно</div>
-                    <div class="fact-item"><strong>Обучение:</strong> Профильное IT</div>
-                    <div class="fact-item"><strong>Цель:</strong> Middle+ Frontend Developer</div>
-                </div>
-            </div>
+<section id="works">
+  <div class="wrap">
+    <h2>Работы</h2>
+    <p class="lead">Демо-проекты: можно открыть и пощупать.</p>
 
-            <div class="about-skills">
-                <h2>Мой стек</h2> <!-- Только это будет большим и синим -->
-                <div class="skill-item">
-                    <span>JavaScript</span> <!-- Это останется обычным -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%">
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-line">
-                    <span>CSS</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill-line">
-                    <span>HTML</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill-line">
-                    <span>Python</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <h2>Мои проекты</h2>
+    <div class="bot-demo">
+      <div>
+        <h3>Бот и мини-апп записи для салона</h3>
+        <p>Выбор услуги и мастера, календарь свободных слотов, напоминания клиентам и админка для владельца. Python, aiogram, PostgreSQL.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://t.me/qq_astral">Попросить показать</a>
+    </div>
 
-        <div class="project-card">
-            <div class="project-content">
-                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">APEX shield</h3>
-                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript(ES6+)</p>
-                <p style="margin-bottom: 20px; line-height: 1.6;">
-                    Разработал адаптивный лендинг для компании зимней экипировки.
-                    Реализовал удобную навигацию, блоки с технологиями и космический дизайн.
-                    Добавил анимации, которых не было в прошлых проектах.
-                </p>
-                <div class="project-links">
-                    <a href="https://github.com/qq-astral666/apex-hud-lens" target="_blank" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
-                    <a href="https://qq-astral666.github.io/apex-hud-lens/index.html" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
-                </div>
-            </div>
+    <div class="works">
+      <article class="work">
+        <a href="https://qq-astral666.github.io/digitalgo">
+          <div class="shot"><img src="img/DigitalGo1.jpg" alt="Главная страница сайта DigitalGo" loading="lazy" width="1600" height="1000"></div>
+          <h3>DigitalGo</h3>
+          <p>Сайт агентства на 5 страниц: кейсы с фильтром по категориям, FAQ, заявка.</p>
+          <span class="tag">демо</span>
+        </a>
+      </article>
+      <article class="work">
+        <a href="https://qq-astral666.github.io/medcenter">
+          <div class="shot"><img src="img/ems6.jpg" alt="Главная страница сайта клиники МедЦентр Плюс" loading="lazy" width="1600" height="1000"></div>
+          <h3>МедЦентр Плюс</h3>
+          <p>Сайт клиники: прайс-листы по направлениям, удобное меню на телефоне.</p>
+          <span class="tag">демо</span>
+        </a>
+      </article>
+      <article class="work">
+        <a href="https://qq-astral666.github.io/automaster">
+          <div class="shot"><img src="img/project1.jpg" alt="Главный экран лендинга автосервиса AutoMaster" loading="lazy" width="1600" height="1000"></div>
+          <h3>AutoMaster</h3>
+          <p>Лендинг автосервиса с услугами и формой записи. Быстро грузится на мобильном.</p>
+          <span class="tag">демо</span>
+        </a>
+      </article>
+    </div>
 
-            <div class="project-image">
-                <div class="slider">
-                    <div class="slides">
-                        <img src="img/apex1.jpg" class="slide active" alt="Главный экран">
-                        <img src="img/apex2.jpg" class="slide" alt="Услуги">
-                        <img src="img/apex3.jpg" class="slide" alt="Контакты">
-                        <img src="img/apex4.jpg" class="slide" alt="Контакты">
-                        <img src="img/apex5.jpg" class="slide" alt="Контакты">
-                        <img src="img/apex6.jpg" class="slide" alt="Контакты">
-                    </div>
-                    <button class="prev-btn" onclick="moveSlide(-1, this)">❮</button>
-                    <button class="next-btn" onclick="moveSlide(1, this)">❯</button>
-                </div>
-            </div>
-        </div>
+    <h3 class="apps-title">Приложения для Mac</h3>
+    <p class="lead">Пять приложений с релизами — их можно скачать и установить.</p>
+    <ul class="apps">
+      <li><a href="https://github.com/qq-astral666/ClipStash"><b>ClipStash</b><span>Менеджер буфера обмена: история скопированного, поиск, закреплённые фрагменты.</span></a></li>
+      <li><a href="https://github.com/qq-astral666/pulse"><b>Pulse</b><span>Нагрузка процессора, память, сеть и батарея — прямо в строке меню.</span></a></li>
+      <li><a href="https://github.com/qq-astral666/Isle"><b>Isle</b><span>Использует вырез MacBook: музыка, таймер фокуса, полка для файлов.</span></a></li>
+      <li><a href="https://github.com/qq-astral666/Hangar"><b>Hangar</b><span>Все проекты разработчика в одном окне: сам определяет тип проекта и открывает в нужной программе.</span></a></li>
+      <li><a href="https://github.com/qq-astral666/Kit"><b>Kit</b><span>Лисёнок, который живёт на рабочем столе и гуляет по окнам.</span></a></li>
+    </ul>
+  </div>
+</section>
 
-        <div class="project-card">
-            <div class="project-content">
-                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">AutoMaster</h3>
-                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML, CSS, JavaScript(ES6+)</p>
-                <p style="margin-bottom: 20px; line-height: 1.6;">
-                    Разработал адаптивный лендинг для автосервиса.
-                    Реализовал удобную навигацию, blocks с услугами и форму записи.
-                    Сделал упор на чистоту кода и скорость загрузки.
-                </p>
-                <div class="project-links">
-                    <a href="https://github.com/qq-astral666/tire-servise" target="_blank" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
-                    <a href="https://qq-astral666.github.io/tire-servise/" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
-                </div>
-            </div>
+<section id="process">
+  <div class="wrap">
+    <h2>Как работаю</h2>
+    <ol class="steps">
+      <li><h3>Созвон или переписка</h3><p>Разбираемся, что нужно вашему бизнесу. 20–30 минут, бесплатно.</p></li>
+      <li><h3>Смета и сроки</h3><p>Присылаю список функций, цену и дату сдачи. Предоплата 50%.</p></li>
+      <li><h3>Разработка</h3><p>Показываю промежуточный результат, вносим правки по ходу.</p></li>
+      <li><h3>Запуск</h3><p>Ставлю на сервер, учу пользоваться, оплата остатка. Месяц поддержки бесплатно.</p></li>
+    </ol>
+  </div>
+</section>
 
-            <!-- БЛОК СО СЛАЙДЕРОМ (Справа) -->
-            <div class="project-image">
-                <div class="slider">
-                    <div class="slides">
-                        <img src="img/project1.jpg" class="slide active" alt="Главный экран">
-                        <img src="img/project2.jpg" class="slide" alt="Услуги">
-                        <img src="img/project3.jpg" class="slide" alt="Контакты">
-                        <img src="img/project4.jpg" class="slide" alt="Контакты">
-                        <img src="img/project5.jpg" class="slide" alt="Контакты">
-                    </div>
-                    <button class="prev-btn" onclick="moveSlide(-1, this)">❮</button>
-                    <button class="next-btn" onclick="moveSlide(1, this)">❯</button>
-                </div>
-            </div>
-        </div>
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Частые вопросы</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Зачем бот, если есть телефон и WhatsApp?</summary>
+        <p>Бот принимает записи и заявки круглосуточно, без вас. Клиент сам видит свободное время, а вы не тратите вечер на переписку и не теряете тех, кому не ответили сразу.</p>
+      </details>
+      <details>
+        <summary>Сколько стоит содержание?</summary>
+        <p>Сервер для бота — от 300 ₽ в месяц. Оплачиваете его напрямую, сервер оформлен на вас.</p>
+      </details>
+      <details>
+        <summary>Можно потом что-то изменить?</summary>
+        <p>Да. Мелкие правки в первый месяц бесплатно, дальше по договорённости. Код остаётся у вас.</p>
+      </details>
+      <details>
+        <summary>Работаете только с Хабаровском?</summary>
+        <p>Нет, всё делается удалённо. В Хабаровске могу приехать и всё показать лично.</p>
+      </details>
+    </div>
+  </div>
+</section>
 
-
-        <!-- КАРТОЧКА 2: Digital Agency -->
-        <div class="project-card">
-            <!-- БЛОК С ТЕКСТОМ (Слева) -->
-            <div class="project-content">
-                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">DigitalGo</h3>
-                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML5, CSS3, JavaScript
-                    (ES6+)</p>
-                <p style="margin-bottom: 20px; line-height: 1.6;">
-                    Разработал адаптивный корпоративный многостраничный сайт из 5 взаимосвязанных страниц.
-                    Реализовал живую фильтрацию кейсов по категориям на чистом JS, всплывающее модальное окно (Lightbox)
-                    для деталей проекта,
-                    динамический счетчик статистики при скролле и интерактивный FAQ-аккордеон.
-                </p>
-                <div class="project-links">
-                    <a href="https://github.com/qq-astral666/digital-agency-portfolio" target="_blank" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
-                    <a href="https://qq-astral666.github.io/digital-agency-portfolio/" target="_blank" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
-                </div>
-            </div>
-
-            <!-- БЛОК СО СЛАЙДЕРОМ (Справа) -->
-            <div class="project-image">
-                <div class="slider">
-                    <div class="slides">
-                        <img src="img/DigitalGo1.jpg" class="slide active" alt="Главная страница">
-                        <img src="img/DigitalGo2.jpg" class="slide" alt="Портфолио с фильтрами">
-                        <img src="img/DigitalGo3.jpg" class="slide" alt="Портфолио с фильтрами">
-                        <img src="img/DigitalGo4.jpg" class="slide" alt="Портфолио с фильтрами">
-                        <img src="img/DigitalGo5.jpg" class="slide" alt="Портфолио с фильтрами">
-                        <img src="img/DigitalGo6.jpg" class="slide" alt="Портфолио с фильтрами">
-                    </div>
-                    <button class="prev-btn" onclick="moveSlide(-1, this)">❮</button>
-                    <button class="next-btn" onclick="moveSlide(1, this)">❯</button>
-                </div>
-            </div>
-        </div> <!-- ВОТ ЭТОТ ТЕГ ЗАКРЫВАЕТ ВТОРУЮ КАРТОЧКУ -->
-
-        <!-- Левая колонка: Текст -->
-        <div class="project-card"
-             style="display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-bottom: 60px;">
-
-            <!-- Левая колонка: Текст (теперь ширина совпадает с DigitalGo) -->
-            <div class="project-content" style="flex: 1; min-width: 300px;">
-                <h3 style="color: var(--accent-color); font-size: 1.8rem; margin-bottom: 10px;">МедЦентр Плюс</h3>
-                <p style="color: #94a3b8; font-weight: bold; margin-bottom: 15px;">Стек: HTML5, CSS3, JavaScript
-                    (ES6+)</p>
-                <p style="margin-bottom: 20px; line-height: 1.6;">
-                    Разработал адаптивный многостраничный сайт клиники семейной медицины из 3 страниц.
-                    Сверстал интерактивные прайс-листы с кастомизированными таблицами стоимости услуг, реализовал
-                    динамический FAQ-аккордеон на чистом JS с плавной CSS-анимацией и настроил полную адаптивность
-                    шапки и контента под мобильные устройства.
-                </p>
-                <div class="project-links">
-                    <a href="https://github.com/qq-astral666/medical-centre" target="_blank" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem;">GitHub</a>
-                    <a href="https://qq-astral666.github.io/medical-centre/index.html" target="_blank" class="btn"
-                       style="padding: 8px 20px; font-size: 0.9rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 10px;">Демо</a>
-                </div>
-            </div>
-
-            <!-- Правая колонка: Картинка (слайдер) -->
-            <div class="project-image">
-                <div class="slider">
-                    <div class="slides">
-                        <img src="img/ems6.jpg" class="slide active" alt="Главная страница">
-                        <img src="img/ems2.jpg" class="slide active" alt="Главная страница">
-                        <img src="img/ems3.jpg" class="slide active" alt="Главная страница">
-                        <img src="img/ems4.jpg" class="slide active" alt="Главная страница">
-                        <img src="img/ems5.jpg" class="slide active" alt="Главная страница">
-                        <img src="img/ems1.jpg" class="slide active" alt="Главная страница">
-                    </div>
-                    <button class="prev-btn" onclick="moveSlide(1, this)">❮</button>
-                    <button class="next-btn" onclick="moveSlide(-1, this)">❯</button>
-                </div>
-            </div>
-        </div>
-
-    </section> <!-- ЗАКРЫВАЕТ ВСЮ СЕКЦИЮ ПРОЕКТОВ -->
-
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Расскажите, что хотите автоматизировать</h2>
+    <p class="lead">Отвечу в течение дня и скажу, сколько это будет стоить.</p>
+    <a class="btn" href="https://t.me/qq_astral">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+      Написать @qq_astral
+    </a>
+    <a class="mail" href="mailto:vladypowerok@gmail.com">vladypowerok@gmail.com</a>
+  </div>
+</section>
 </main>
 
-<section id="contact">
-    <div class="contact-container">
-        <h2>Свяжитесь со мной</h2>
-        <p>Готов обсудить ваши идеи или просто пообщаться о технологиях. <span>Выбирайте любой удобный способ:</span>
-        </p>
-        <div class="contact-methods">
-            <a href="mailto:vladypowerok@gmail.com" class="contact-item">
-                <div class="icon-box">📧</div>
-                <div class="contact-info">
-                    <span class="label">Email</span>
-                </div>
-            </a>
-            <a href="https://t.me/zxcbashmack" target="_blank" class="contact-item">
-                <div class="icon-box">✈️</div>
-                <div class="contact-info">
-                    <span class="label">Telegram</span>
-                </div>
-            </a>
-            <a href="https://github.com/qq-astral666" target="_blank" class="contact-item">
-                <div class="icon-box">💻</div>
-                <div class="contact-info">
-                    <span class="label">GitHub</span>
-                </div>
-            </a>
-        </div>
+<footer>
+  <div class="wrap foot">
+    <div class="foot-about">
+      <a class="logo" href="#">Владислав</a>
+      <p>Telegram-боты, мини-аппы, сайты и приложения для Mac. Хабаровск и удалённо.</p>
+      <a class="btn foot-btn" href="https://t.me/qq_astral">Обсудить проект</a>
     </div>
-</section>
-<script src="script.js"></script>
+    <nav class="foot-col" aria-label="Разделы в подвале">
+      <h3>Разделы</h3>
+      <a href="#services">Услуги и цены</a>
+      <a href="#works">Работы</a>
+      <a href="#process">Как работаю</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="foot-col">
+      <h3>Связаться</h3>
+      <a href="https://t.me/qq_astral">Telegram: @qq_astral</a>
+      <a href="mailto:vladypowerok@gmail.com">vladypowerok@gmail.com</a>
+      <a href="https://github.com/qq-astral666">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© 2026 Владислав</span>
+    <!-- TODO: если оформлен как самозанятый — раскомментируй -->
+    <!-- <span>Самозанятый, работаю по договору, чек на каждую оплату</span> -->
+    <span>Этот сайт сделан вручную, без конструкторов</span>
+  </div></div>
+</footer>
+
 </body>
 </html>
