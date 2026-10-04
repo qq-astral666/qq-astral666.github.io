@@ -184,7 +184,7 @@ header nav a:not(.btn):hover::after{transform:scaleX(1)}
 
 /* Чат: появление сообщений и «печатает…» */
 .msgs>*{transition:opacity .4s var(--ease),transform .4s var(--ease)}
-.js .msgs>*:not(.show){opacity:0;transform:translateY(10px) scale(.97)}
+.msgs.play>*:not(.show){opacity:0;transform:translateY(10px) scale(.97)}
 .msgs>.show{opacity:1;transform:none}
 .m.out{transform-origin:right bottom}
 .typing{display:inline-flex;gap:4px;padding:12px 14px;background:var(--paper);border-radius:16px;border-bottom-left-radius:5px;align-self:flex-start}
@@ -260,5 +260,5 @@ summary::after{transition:transform .35s var(--ease)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .reveal{opacity:1;transform:none}
   .js .hero *{opacity:1!important}
-  .js .msgs>*{opacity:1!important;transform:none!important}
+  .msgs>*{opacity:1!important;transform:none!important}
 }

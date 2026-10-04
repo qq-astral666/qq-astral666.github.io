@@ -39,8 +39,9 @@ if (msgs && !reduce) {
   typing.innerHTML = '<i></i><i></i><i></i>';
   const wait = ms => new Promise(r => setTimeout(r, ms));
 
+  msgs.classList.add('play'); // прячем сообщения только когда JS реально запустился
+
   async function play() {
-    msgs.classList.add('play');
     items.forEach(el => el.classList.remove('show'));
     slot && slot.classList.remove('on');
     await wait(600);
