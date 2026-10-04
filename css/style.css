@@ -101,7 +101,7 @@ header nav .btn{padding:10px 18px;color:#fff}
 @media(max-width:700px){.bot-demo{grid-template-columns:1fr}}
 
 .apps-title{font-size:1.4rem;margin:72px 0 8px}
-.apps{list-style:none;margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));border-top:1.5px solid var(--ink)}
+.apps{list-style:none;margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));border-top:1.5px solid var(--ink)}
 .apps a{display:block;text-decoration:none;padding:20px 20px 20px 0;border-bottom:1px solid var(--line);height:100%}
 .apps b{display:block;font-family:var(--display);font-weight:500;margin-bottom:4px}
 .apps span{color:var(--muted);font-size:.97rem}
@@ -147,6 +147,8 @@ footer{background:var(--ink);color:#C3CDD6;padding:64px 0 28px;font-size:.95rem}
 
 
 /* ===== Полировка и анимации ===== */
+/* Safari: без этого содержимое скруглённого экрана может пропадать во время анимаций */
+.screen{-webkit-mask-image:-webkit-radial-gradient(white,black);transform:translateZ(0)}
 :root{--ease:cubic-bezier(.22,1,.36,1)}
 
 /* Шапка: липкая, с размытием после скролла */
@@ -238,6 +240,21 @@ summary::after{transition:transform .35s var(--ease)}
 .contact::before{content:"";position:absolute;inset:auto 50% -260px auto;transform:translateX(50%);width:720px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(42,139,216,.2),transparent);pointer-events:none}
 .contact .wrap{position:relative}
 
+/* Телефон на мобильных: компактнее и без «парения» */
+@media(max-width:900px){
+  .ready .hero .phone{animation:rise 1s var(--ease) .25s both}
+  .hero::before{width:420px;height:420px;right:-160px;top:auto;bottom:-60px}
+}
+@media(max-width:600px){
+  .hero{padding:24px 0 64px}
+  .phone{max-width:300px;border-radius:38px;padding:10px}
+  .screen{border-radius:30px}
+  .chat-head{padding:12px 14px}
+  .ava{width:34px;height:34px;font-size:1.05rem}
+  .msgs{height:405px;padding:12px 10px 14px;gap:7px;font-size:.84rem}
+  .m{padding:8px 11px}
+  .kb span{padding:6px 2px;font-size:.8rem}
+}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}

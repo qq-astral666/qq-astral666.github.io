@@ -61,10 +61,17 @@ if (msgs && !reduce) {
     await wait(500);
     play();
   }
-  // Запускаем, только когда телефон виден
-  new IntersectionObserver((e, o) => {
-    if (e[0].isIntersecting) { play(); o.disconnect(); }
-  }).observe(msgs);
+  // Запускаем, когда телефон виден (или сразу, если браузер не умеет IntersectionObserver)
+  let started = false;
+  const start = () => { if (!started) { started = true; play(); } };
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((e, o) => {
+      if (e.some(x => x.isIntersecting)) { start(); o.disconnect(); }
+    }, { threshold: 0.15 }).observe(msgs);
+    setTimeout(start, 4000); // страховка: через 4 с запускаем в любом случае
+  } else {
+    start();
+  }
 }
 
 // FAQ: плавное раскрытие и закрытие во всех браузерах (включая Safari)
