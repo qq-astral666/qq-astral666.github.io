@@ -147,8 +147,7 @@ footer{background:var(--ink);color:#C3CDD6;padding:64px 0 28px;font-size:.95rem}
 
 
 /* ===== Полировка и анимации ===== */
-/* Safari: без этого содержимое скруглённого экрана может пропадать во время анимаций */
-.screen{-webkit-mask-image:-webkit-radial-gradient(white,black);transform:translateZ(0)}
+
 :root{--ease:cubic-bezier(.22,1,.36,1)}
 
 /* Шапка: липкая, с размытием после скролла */
@@ -183,9 +182,10 @@ header nav a:not(.btn):hover::after{transform:scaleX(1)}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
 /* Чат: появление сообщений и «печатает…» */
-.msgs>*{transition:opacity .4s var(--ease),transform .4s var(--ease)}
-.msgs.play>*:not(.show){opacity:0;transform:translateY(10px) scale(.97)}
-.msgs>.show{opacity:1;transform:none}
+/* Скрытое сообщение не занимает место (display:none), появившееся — анимируется.
+   Без transition на opacity: так Safari на iOS гарантированно перерисовывает чат. */
+.msgs.play>*:not(.show){display:none}
+.msgs.play>.show{animation:pop .4s var(--ease) both}
 .m.out{transform-origin:right bottom}
 .typing{display:inline-flex;gap:4px;padding:12px 14px;background:var(--paper);border-radius:16px;border-bottom-left-radius:5px;align-self:flex-start}
 .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:dot 1s infinite}
@@ -260,5 +260,5 @@ summary::after{transition:transform .35s var(--ease)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .reveal{opacity:1;transform:none}
   .js .hero *{opacity:1!important}
-  .msgs>*{opacity:1!important;transform:none!important}
+  .msgs>*{display:revert!important}
 }

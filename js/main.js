@@ -44,7 +44,7 @@ if (msgs && !reduce) {
   async function play() {
     items.forEach(el => el.classList.remove('show'));
     slot && slot.classList.remove('on');
-    await wait(600);
+    await wait(300);
     for (const el of items) {
       const isBot = el.classList.contains('in');
       if (isBot) {
@@ -62,17 +62,7 @@ if (msgs && !reduce) {
     await wait(500);
     play();
   }
-  // Запускаем, когда телефон виден (или сразу, если браузер не умеет IntersectionObserver)
-  let started = false;
-  const start = () => { if (!started) { started = true; play(); } };
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver((e, o) => {
-      if (e.some(x => x.isIntersecting)) { start(); o.disconnect(); }
-    }, { threshold: 0.15 }).observe(msgs);
-    setTimeout(start, 4000); // страховка: через 4 с запускаем в любом случае
-  } else {
-    start();
-  }
+  play(); // стартуем сразу: пустой телефон выглядит как поломка
 }
 
 // FAQ: плавное раскрытие и закрытие во всех браузерах (включая Safari)
