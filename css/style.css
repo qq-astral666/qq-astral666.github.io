@@ -52,12 +52,12 @@ header nav .btn{padding:10px 18px;color:#fff}
 
 /* Телефон с демо-чатом */
 .phone{width:100%;max-width:360px;background:var(--ink);border-radius:44px;padding:12px;box-shadow:0 30px 60px -20px rgba(20,32,43,.35)}
-.screen{background:var(--chat);border-radius:34px;overflow:hidden}
-.chat-head{background:var(--paper);display:flex;gap:12px;align-items:center;padding:16px 18px}
+.screen{background:var(--chat);border-radius:34px}
+.chat-head{background:var(--paper);display:flex;gap:12px;align-items:center;padding:16px 18px;border-radius:34px 34px 0 0}
 .ava{width:40px;height:40px;border-radius:50%;background:#F2B544;display:grid;place-items:center;font-size:1.25rem}
 .chat-head b{display:block;font-size:.95rem}
 .chat-head span{font-size:.8rem;color:var(--blue)}
-.msgs{padding:16px 12px 18px;display:flex;flex-direction:column;gap:8px;height:460px;overflow:hidden;font-size:.92rem}
+.msgs{padding:16px 12px 18px;display:flex;flex-direction:column;gap:8px;height:460px;font-size:.92rem}
 .m{max-width:82%;padding:9px 13px;border-radius:16px;background:var(--paper);line-height:1.4}
 .m.out{align-self:flex-end;background:var(--out);border-bottom-right-radius:5px}
 .m.in{border-bottom-left-radius:5px}
@@ -171,7 +171,8 @@ header nav a:not(.btn):hover::after{transform:scaleX(1)}
   filter:blur(10px);pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
 .hero .wrap{position:relative}
 @keyframes drift{to{transform:translate(-60px,40px) scale(1.08)}}
-.js:not(.ready) .hero h1,.js:not(.ready) .hero .lead,.js:not(.ready) .hero-actions,.js:not(.ready) .facts,.js:not(.ready) .hero .phone,.js:not(.ready) .phone-note{opacity:0}
+.js:not(.ready) .hero h1,.js:not(.ready) .hero .lead,.js:not(.ready) .hero-actions,.js:not(.ready) .facts{opacity:0}
+@media(min-width:901px){.js:not(.ready) .hero .phone,.js:not(.ready) .phone-note{opacity:0}}
 .ready .hero h1,.ready .hero .lead,.ready .hero-actions,.ready .facts,.ready .hero .phone,.ready .phone-note{animation:rise .9s var(--ease) both}
 .hero .lead{animation-delay:.1s}
 .hero-actions{animation-delay:.2s}
@@ -184,10 +185,8 @@ header nav a:not(.btn):hover::after{transform:scaleX(1)}
 /* Чат: появление сообщений и «печатает…» */
 /* Скрытое сообщение не занимает место (display:none), появившееся — анимируется.
    Без transition на opacity: так Safari на iOS гарантированно перерисовывает чат. */
-.msgs.play>*:not(.show){display:none}
-.msgs.play>.show{animation:pop .4s var(--ease) both}
 .m.out{transform-origin:right bottom}
-.typing{display:inline-flex;gap:4px;padding:12px 14px;background:var(--paper);border-radius:16px;border-bottom-left-radius:5px;align-self:flex-start}
+.typing{display:inline-flex;gap:4px;padding:12px 14px;background:var(--paper);border-radius:16px;border-bottom-left-radius:5px;align-self:start}
 .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:dot 1s infinite}
 .typing i:nth-child(2){animation-delay:.15s}
 .typing i:nth-child(3){animation-delay:.3s}
@@ -242,23 +241,50 @@ summary::after{transition:transform .35s var(--ease)}
 
 /* Телефон на мобильных: компактнее и без «парения» */
 @media(max-width:900px){
-  .ready .hero .phone{animation:rise 1s var(--ease) .25s both}
+  .ready .hero .phone,.hero .phone{animation:none}
   .hero::before{width:420px;height:420px;right:-160px;top:auto;bottom:-60px}
 }
 @media(max-width:600px){
   .hero{padding:24px 0 64px}
   .phone{max-width:300px;border-radius:38px;padding:10px}
   .screen{border-radius:30px}
+  .chat-head{border-radius:30px 30px 0 0}
   .chat-head{padding:12px 14px}
   .ava{width:34px;height:34px;font-size:1.05rem}
   .msgs{height:405px;padding:12px 10px 14px;gap:7px;font-size:.84rem}
   .m{padding:8px 11px}
   .kb span{padding:6px 2px;font-size:.8rem}
 }
+
+/* ===== Демо-чат: бесконечный цикл на чистом CSS (без JS) ===== */
+.slot{display:grid;max-width:82%}
+.slot>*{grid-area:1/1;justify-self:start;align-self:start}
+.slot .m{max-width:none}
+.msgs .m,.msgs .kb,.msgs .typing{animation-duration:14s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both}
+.c1{animation-name:c1}
+@keyframes c1{0%,8.57%{opacity:0;transform:translateY(8px)}11.57%,90%{opacity:1;transform:none}93%,100%{opacity:0;transform:none}}
+.c2{animation-name:c2}
+@keyframes c2{0%,14.29%{opacity:0;transform:translateY(8px)}17.29%,90%{opacity:1;transform:none}93%,100%{opacity:0;transform:none}}
+.c3{animation-name:c3}
+@keyframes c3{0%,24.29%{opacity:0;transform:translateY(8px)}27.29%,90%{opacity:1;transform:none}93%,100%{opacity:0;transform:none}}
+.c4{animation-name:c4}
+@keyframes c4{0%,27.14%{opacity:0;transform:translateY(8px)}30.14%,90%{opacity:1;transform:none}93%,100%{opacity:0;transform:none}}
+.c5{animation-name:c5}
+@keyframes c5{0%,42.14%{opacity:0;transform:translateY(8px)}45.14%,90%{opacity:1;transform:none}93%,100%{opacity:0;transform:none}}
+.c6{animation-name:c6}
+@keyframes c6{0%,48.57%{opacity:0;transform:translateY(8px)}51.57%,90%{opacity:1;transform:none}93%,100%{opacity:0;transform:none}}
+.t1{animation-name:t1}
+@keyframes t1{0%,2.14%{opacity:0}3.14%,8.07%{opacity:1}8.57%,100%{opacity:0}}
+.t3{animation-name:t3}
+@keyframes t3{0%,17.86%{opacity:0}18.86%,23.79%{opacity:1}24.29%,100%{opacity:0}}
+.t5{animation-name:t5}
+@keyframes t5{0%,35.71%{opacity:0}36.71%,41.64%{opacity:1}42.14%,100%{opacity:0}}
+.kb .on{animation:kbon 14s linear infinite both}
+@keyframes kbon{0%,32.14%{background:rgba(255,255,255,.55);color:var(--ink)}34.14%,100%{background:var(--blue);color:#fff}}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
+  .msgs .typing{visibility:hidden}
   .js .reveal{opacity:1;transform:none}
   .js .hero *{opacity:1!important}
-  .msgs>*{display:revert!important}
 }

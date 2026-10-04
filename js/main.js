@@ -29,41 +29,7 @@ if (reduce || !('IntersectionObserver' in window)) {
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 }
 
-// Демо-чат: бот «печатает», сообщения появляются по очереди, затем повтор
-const msgs = document.querySelector('.msgs');
-if (msgs && !reduce) {
-  const items = [...msgs.children];
-  const slot = msgs.querySelector('.kb .on');
-  const typing = document.createElement('div');
-  typing.className = 'typing show';
-  typing.innerHTML = '<i></i><i></i><i></i>';
-  const wait = ms => new Promise(r => setTimeout(r, ms));
-
-  msgs.classList.add('play'); // прячем сообщения только когда JS реально запустился
-
-  async function play() {
-    items.forEach(el => el.classList.remove('show'));
-    slot && slot.classList.remove('on');
-    await wait(300);
-    for (const el of items) {
-      const isBot = el.classList.contains('in');
-      if (isBot) {
-        msgs.insertBefore(typing, el);
-        await wait(900);
-        typing.remove();
-      } else {
-        await wait(el.classList.contains('kb') ? 200 : 700);
-      }
-      el.classList.add('show');
-      if (el.classList.contains('kb') && slot) { await wait(700); slot.classList.add('on'); }
-    }
-    await wait(5000);
-    items.forEach(el => el.classList.remove('show'));
-    await wait(500);
-    play();
-  }
-  play(); // стартуем сразу: пустой телефон выглядит как поломка
-}
+// Демо-чат крутится на чистом CSS — JS ему не нужен
 
 // FAQ: плавное раскрытие и закрытие во всех браузерах (включая Safari)
 document.querySelectorAll('details').forEach(d => {
